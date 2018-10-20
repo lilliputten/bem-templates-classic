@@ -10,10 +10,9 @@
 %s/\<\(capitalize\|getModValString\|toObjectKey\|hasNotDefaultModValue\|toModValue\|getEntityName\|getObjectName\|getHeader\)(/utils.\1(/g
 */
 
-module.exports = {
+const config = require('./.config');
 
-  elemDelim: '__',
-  modDelim: '_',
+module.exports = Object.assign({
 
   /** capitalize ** {{{
    */
@@ -89,4 +88,4 @@ module.exports = {
 
   },/*}}}*/
 
-};
+}, config);
