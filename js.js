@@ -37,7 +37,7 @@ __BASE) {
    * @class ${entityName}
    * @bem
    */
-  var ${entityName}_proto = /** @lends ${entityName}_prototype */ {
+  var _${entityName}_proto = /** @lends ${entityName}_prototype */ {
 
     // /** _getDefaultParams ** {{{ */
     // _getDefaultParams: function() {
@@ -68,8 +68,8 @@ __BASE) {
 
   };
 
-  // /** ${entityName}_static ** {{{ Static properties... */
-  // var ${entityName}_static = /** @lends ${entityName} */ {
+  // /** _${entityName}_static ** {{{ Static properties... */
+  // var _${entityName}_static = /** @lends ${entityName} */ {
   //
   //   // lazyInit : true,
   //
@@ -87,7 +87,7 @@ __BASE) {
   // };/*}}}*/
 
   // Provide element...
-  provide(bemDom.declElem('${block}', '${elem}'));
+  provide(bemDom.declElem('${block}', '${elem}', _${entityName}_proto));
 
 }); // Module end
 `;/* ...Content }}}*/
@@ -124,7 +124,7 @@ ${block}__${elem}) {
    * @class ${entityName}
    * @bem
    */
-  var ${entityName}_proto = /** @lends ${entityName}_prototype */ {
+  var _${entityName}_proto = /** @lends ${entityName}_prototype */ {
 
     // /** _getDefaultParams ** {{{ */
     // _getDefaultParams: function() {
@@ -155,8 +155,8 @@ ${block}__${elem}) {
 
   };
 
-  // /** ${entityName}_static ** {{{ Static properties... */
-  // var ${entityName}_static = /** @lends ${entityName} */ {
+  // /** _${entityName}_static ** {{{ Static properties... */
+  // var _${entityName}_static = /** @lends ${entityName} */ {
   //
   //   // lazyInit : true,
   //
@@ -174,7 +174,7 @@ ${block}__${elem}) {
   // };/*}}}*/
 
   // Provide element modifier
-  provide(${block}__${elem}.declMod({modName: '${modName}', modVal: ${utils.toModValue(modVal)}}, ${entityName}_proto));
+  provide(${block}__${elem}.declMod({modName: '${modName}', modVal: ${utils.toModValue(modVal)}}, _${entityName}_proto));
 
 }); // Module end
 `;/* ...Content }}}*/
@@ -209,7 +209,7 @@ __BASE) {
    * @class ${entityName}
    * @bem
    */
-  var ${entityName}_proto = /* @lends ${entityName}.prototype */ {
+  var _${entityName}_proto = /* @lends ${entityName}.prototype */ {
 
     // /** _getDefaultParams ** {{{ */
     // _getDefaultParams: function() {
@@ -241,8 +241,8 @@ __BASE) {
 
   };
 
-  // /** ${entityName}_static ** {{{ Static properties... */
-  // var ${entityName}_static = /** @lends ${entityName} */ {
+  // /** _${entityName}_static ** {{{ Static properties... */
+  // var _${entityName}_static = /** @lends ${entityName} */ {
   //
   //   // lazyInit : true,
   //
@@ -260,7 +260,7 @@ __BASE) {
   // };/*}}}*/
 
   // Provide block...
-  provide(bemDom.declBlock(this.name, ${entityName}_proto));
+  provide(bemDom.declBlock(this.name, _${entityName}_proto));
 
 }); // Module end
 `;/* ...Content }}}*/
@@ -296,7 +296,7 @@ ${block}) {
    * @class ${entityName}
    * @bem
    */
-  var ${entityName}_proto = /** @lends ${entityName}_prototype */ {
+  var _${entityName}_proto = /** @lends ${entityName}_prototype */ {
 
     // /** _getDefaultParams ** {{{ */
     // _getDefaultParams: function() {
@@ -327,8 +327,8 @@ ${block}) {
 
   };
 
-  // /** ${entityName}_static ** {{{ Static properties... */
-  // var ${entityName}_static = /** @lends ${entityName} */ {
+  // /** _${entityName}_static ** {{{ Static properties... */
+  // var _${entityName}_static = /** @lends ${entityName} */ {
   //
   //   // lazyInit : true,
   //
@@ -346,7 +346,7 @@ ${block}) {
   // };/*}}}*/
 
   // Provide block modifier
-  provide(${block}.declMod({modName: '${modName}', modVal: ${utils.toModValue(modVal)}}, ${entityName}_proto));
+  provide(${block}.declMod({modName: '${modName}', modVal: ${utils.toModValue(modVal)}}, _${entityName}_proto));
 
 }); // Module end
 `;/* ...Content }}}*/
