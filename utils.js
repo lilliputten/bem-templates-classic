@@ -3,12 +3,8 @@
  * @module template utils
  * @author lilliputten <lilliputten@yandex.ru>
  * @since 2018.09.29, 23:06
- * @version 2018.10.25, 03:39
+ * @version 2018.10.25, 03:43
  */
-
-/*
-%s/\<\(capitalize\|getModValString\|toObjectKey\|hasNotDefaultModValue\|toModValue\|getEntityName\|getObjectName\|getHeader\)(/utils.\1(/g
-*/
 
 const fs = require('fs');
 
