@@ -3,14 +3,21 @@
  * @module template utils
  * @author lilliputten <lilliputten@yandex.ru>
  * @since 2018.09.29, 23:06
- * @version 2018.09.29, 23:06
+ * @version 2018.10.25, 03:39
  */
 
 /*
 %s/\<\(capitalize\|getModValString\|toObjectKey\|hasNotDefaultModValue\|toModValue\|getEntityName\|getObjectName\|getHeader\)(/utils.\1(/g
 */
 
-const config = require('./.config');
+const fs = require('fs');
+
+// Use `config.js` if you need another from default (`.config.default.js`) parameters.
+let configFile = './.config.js';
+if (!fs.existsSync(configFile)) {
+  configFile = './.config.default.js';
+}
+const config = require(configFile);
 
 module.exports = Object.assign({
 
