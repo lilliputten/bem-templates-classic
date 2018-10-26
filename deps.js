@@ -22,7 +22,11 @@ module.exports = function ({ block, elem, mod={} }) {
   ],
   shouldDeps : [
 
-    'config',
+    { mods: [
+    ]},
+
+    { elems: [
+    ]},
 
   ],
 }]);
