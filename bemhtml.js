@@ -9,7 +9,7 @@
 const utils = require('./utils');
 
 const extraHeaders = `// vim: ft=javascript
-/* globals config, addAttrs, addElemMods, addJs, addMix, addMods, appendContent, apply, applyCtx, applyNext, attrs, bem, block, cls, content, def, elem, elemMod, elemMods, extend, js, local, match, mix, mod, mode, mods, oninit, prependContent, replace, tag, wrap, xjstOptions */`;
+/* globals config, helpers, addAttrs, addElemMods, addJs, addMix, addMods, appendContent, apply, applyCtx, applyNext, attrs, bem, block, cls, content, def, elem, elemMod, elemMods, extend, js, local, match, mix, mod, mode, mods, oninit, prependContent, replace, tag, wrap, xjstOptions */`;
 
 /** elemTmpl ** {{{
  */
