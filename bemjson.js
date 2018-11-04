@@ -14,6 +14,7 @@ const utils = require('./utils');
  */
 module.exports = function (entity, naming) {
 
+  const entityName = utils.getEntityName({ block: entity });
   const header = utils.getHeader({block: entity});
 
   /** Content ... {{{*/
@@ -34,9 +35,9 @@ const
   pageContent = {
     block: 'test',
     cls: 'container',
-    content: {
-      '${entityName} content'
-    },
+    content: [
+      '${entityName} content',
+    ],
   },/*}}}*/
 
   /** bemjson ** {{{ Entire page
@@ -44,7 +45,6 @@ const
   bemjson = Env.page({
     pageId,
     content: pageContent,
-    // headerContent: 'override header content',
   })/*}}}*/
 
 ;
